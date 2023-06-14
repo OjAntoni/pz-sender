@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Powiadomienie o nowym artykule</title>
+    <style>
+        .image-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .image-container img {
+            max-width: 100px; /* Adjust the desired width */
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+<h1>Powiadomienie o nowym artykule</h1>
+<p>
+    Witaj,
+</p>
+<p>
+    Chcielibyśmy poinformować Cię, że do tematu, na który jesteś zapisany, został dodany nowy artykuł.
+</p>
+<h2>Temat: <span th:text="${userMessage.topicTitle}"></span></h2>
+<h3>Tytuł artykułu: <span th:text="${userMessage.articleTitle}"></span></h3>
+<p>
+    Autor: <span th:text="${userMessage.author}"></span>
+</p>
+<p>
+    Dziękujemy za zainteresowanie naszą platformą!
+</p>
+<p>
+    Pozdrawiamy,
+    Zespół Aplikacji
+</p>
+<div class="image-container">
+    <img src="https://www.sas.com/pl_pl/customers/politechnika-warszawska/_jcr_content/par02/image_6a85.img.jpg/1457728206832.jpg">
+</div>
+
+</body>
+</html>
